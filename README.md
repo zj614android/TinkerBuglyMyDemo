@@ -137,7 +137,7 @@ log:
 
 804说明是上报联网ok了。接下来我们要去bugly平台上传我们的补丁了。（bugly平台的注册在上一篇有提）
 
-## step6:上传补丁包
+## step7:上传补丁包，补丁下发，热更新完成
 2张图来演示操作步骤
 ![](https://wx2.sinaimg.cn/mw1024/0061ejqJgy1flvxjid0rhj311x0gq0tn.jpg)
 ![](https://wx2.sinaimg.cn/mw1024/0061ejqJgy1flvxmg3lr4j30pp0exweq.jpg)
