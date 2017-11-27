@@ -26,6 +26,34 @@
 app-release-mapping.txt
 app-release-R.txt
 
+另外提醒下打包之前注意配置好打包信息：
+```java
+    signingConfigs {
+        // your debug keystore
+        debug {
+            storeFile file("buglytestreleasekey.jks")
+            storePassword "buglytestreleasekey"
+            keyAlias "buglytestreleasekey"
+            keyPassword "buglytestreleasekey"
+        }
+
+        release{
+            storeFile file("buglytestreleasekey.jks")
+            storePassword "buglytestreleasekey"
+            keyAlias "buglytestreleasekey"
+            keyPassword "buglytestreleasekey"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release  //这里比较重要 不要漏掉了
+        }
+    }
+```
+
 ## step2:修改tinker-support.gradle内的baseApkDir为基准包当前的路径名称
 ```java
 apply plugin: 'com.tencent.bugly.tinker-support'
